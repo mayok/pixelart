@@ -1,0 +1,22 @@
+#main {
+  display: grid;
+  grid-template: repeat(8, 10px) / repeat(8, 10px);
+  width: calc(8 * 10px);
+  box-sizing: content-box;
+}
+
+p {
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #cacaca;
+  border-top: 1px solid #cacaca;
+  box-sizing: border-box;
+}
+p:nth-child(-n+8) {
+  border-top: 1px solid rgba(255,255,255,1);
+}
+p:nth-child(8n + 8) {
+  border-right: 1px solid rgba(255, 255,255,1);
+  padding-right: 1px;
+}
